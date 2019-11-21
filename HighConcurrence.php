@@ -286,7 +286,7 @@ class RedisQueue{
 
         return $count == 1?(empty($result)?false:$result[0]):$result;
     }
-    
+
     //////////////////////////////////////////////////////////////////////////////
     /// https://blog.csdn.net/yafei450225664/article/details/78924149
     /// https://blog.csdn.net/weixin_39278982/article/details/81216416

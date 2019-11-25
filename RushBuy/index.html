@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抢购</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        function push(uid){
+            $('#msg'+uid).html('请耐心等候……');
+            $.get('./lpush.php',{uid:uid},function(data){
+                $('#msg'+uid).html(data);
+            })
+        }
+    </script>
+</head>
+<body>
+<span id="msg5"></span><br>
+<input type="button" value="抢购5" onclick="push(5)"><br>
+<span id="msg15"></span><br>
+<input type="button" value="抢购15" onclick="push(15)"><br>
+<span id="msg25"></span><br>
+<input type="button" value="抢购25" onclick="push(25)"><br>
+<span id="msg35"></span><br>
+<input type="button" value="抢购35" onclick="push(35)"><br>
+<span id="msg45"></span><br>
+<input type="button" value="抢购45" onclick="push(45)"><br>
+<span id="msg55"></span><br>
+<input type="button" value="抢购55" onclick="push(55)"><br>
+</body>
+</html>
